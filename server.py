@@ -74,6 +74,7 @@ def index():
             </div>
             <div id="gallery" class="gallery"></div>
 
+            <a href="/gallery/0">Gallerie</a>
             <script>
 "use strict";
 window.onload = function() {
@@ -152,9 +153,9 @@ def gallery(page):
 
     buttons = ''
     if page >= 1:
-        buttons += '<a href="/gallery/{prev}">Precedent</a>'.format(prev=page - 1)
+        buttons += '<a href="/gallery/{prev}">⏮️ Precedent</a>'.format(prev=page - 1)
     if len(files) == N_per_page:
-        buttons += '<br/><a href="/gallery/{next}">Suivant</a>'.format(next=page+1)
+        buttons += '<br/><a href="/gallery/{next}">⏭️ Suivant</a>'.format(next=page+1)
 
     if len(files) == 0:
         return """
